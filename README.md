@@ -27,3 +27,19 @@ python manage.py createsuperuser
 ```
 *ps:超级账户的目的是为了进入到系统管理界面以UI界面的形式添加数据*
 
+启动后端服务
+```shell
+python manage.py runserver
+```
+
+### 前端
+终端进入到frontend目录安装依赖
+```shell
+npm i
+```
+
+启动前端服务
+```shell
+npm start
+```
+
