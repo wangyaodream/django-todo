@@ -7,3 +7,23 @@
 - [x] 增加前后端交互
 - [ ] 完善交互功能
 - [ ] 嵌入其他功能
+
+## Usage
+
+### 后端
+终端进入到backend目录安装依赖
+```shell
+pip install -r requirements.txt
+```
+
+初始化数据库数据
+```shell
+python manage.py migrate
+```
+
+创建超级账户
+```shell
+python manage.py createsuperuser
+```
+*ps:超级账户的目的是为了进入到系统管理界面以UI界面的形式添加数据*
+
