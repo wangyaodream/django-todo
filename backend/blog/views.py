@@ -7,7 +7,7 @@ from .serializers import ArticleSerializer
 
 
 @api_view(['GET', 'POST'])
-def article_list(request):
+def article_list(request, format=None):
     if request.method == 'GET':
         articles = Article.objects.all()
         serializer = ArticleSerializer(articles, many=True)
@@ -21,7 +21,7 @@ def article_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def article_detail(request, pk):
+def article_detail(request, pk, format=None):
     try:
         article = Article.objects.get(pk=pk)
     except Article.DoesNotExist:

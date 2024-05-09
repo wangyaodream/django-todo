@@ -5,7 +5,7 @@
 - [x] 后端Django逻辑实现
 - [x] 前端React模板实现
 - [x] 增加前后端交互
-- [ ] 完善交互功能
+- [ ] 完善更新
 - [ ] 嵌入其他功能
 
 ## Usage
@@ -42,4 +42,11 @@ npm i
 ```shell
 npm start
 ```
+
+## Apps
+### Todo
+一个todo list web应用
+
+### blog
+一个使用DRF(Django Rest Framework)实现的符合RESTful标准的应用。
 
