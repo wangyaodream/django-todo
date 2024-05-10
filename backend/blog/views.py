@@ -1,7 +1,6 @@
 from rest_framework import status
 # from rest_framework.decorators import api_view
-from rest_framework import mixins
-from rest_framework import generics
+from rest_framework import mixins, generics, viewsets
 from django.http import Http404
 from rest_framework.response import Response
 
@@ -123,3 +122,13 @@ class ArticleDetail(mixins.RetrieveModelMixin,
 #     elif request.method == 'DELETE':
 #         article.delete()
 #         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class ArticleViewSet(viewsets.ModelViewSet):
+    """
+    这样不需要再定义 ArticleList 和 ArticleDetail 两个类了
+    """
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
