@@ -12,7 +12,8 @@ class ArticleSerializer(serializers.ModelSerializer):
     serializer.Serializer需要我们手动定义字段
     serializer.ModelSerializer会自动根据模型定义字段
     """
-    author = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    # 当需要隐藏author时
+    # author = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
     class Meta:
         model = Article
