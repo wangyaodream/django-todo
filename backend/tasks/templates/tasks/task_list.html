@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tasks List</title>
+</head>
+<body>
+    <h3>Tasks List</h3>
+    {% for task in tasks %}
+        <p>{{ forloop.counter }}. {{ task.name }} - {{ task.get_status_display }}
+            (<a href="{% url 'tasks:task_update' task.id %}">Update</a>|
+            <a href="{% url 'tasks:task_delete' task.id %}">Delete</a>)
+        </p>
+    {% endfor %}
+
+    <p><a href="{% url 'tasks:task_create' %}">Create Task</a></p>
+</body>
+</html>
