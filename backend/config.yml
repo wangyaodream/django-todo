@@ -1,3 +1,11 @@
 common:
-  db_type:
-    - sqlite
+  author: wangyao
+  email: wangyao.dream@hotmail.com
+  languages:
+    - python
+    - javascript
+databse:
+  db_type: sqlite
+  cache_db: redis
+  cache_db_host: localhost
+  cache_db_port: 6379
