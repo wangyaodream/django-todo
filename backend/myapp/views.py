@@ -36,6 +36,5 @@ def index(request):
     if session_key in request.session and request.session[session_key]:
         return render(request, 'myapp/index.html')
     else:
-        print("我需要form!")
         form = InvitationCodeForm()
         return render(request, 'myapp/index.html', {'form': form,})
