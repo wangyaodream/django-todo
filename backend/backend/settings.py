@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'todo',
     'blog',
     'tasks',
+    'myapp',
 ]
 
 MIDDLEWARE = [
