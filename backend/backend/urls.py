@@ -29,4 +29,5 @@ urlpatterns = [
     path('v1/', include('blog.urls')),
     path('tasks', include('tasks.urls')),
     path('myapp', include('myapp.urls')),
+    path('login', include('login.urls')),
 ]
