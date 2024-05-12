@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('v1/', include('blog.urls')),
-    path('tasks', include('tasks.urls')),
-    path('myapp', include('myapp.urls')),
-    path('login', include('login.urls')),
+    path('tasks/', include('tasks.urls')),
+    path('myapp/', include('myapp.urls')),
+    path('login/', include('login.urls')),
 ]

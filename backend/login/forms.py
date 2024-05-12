@@ -3,7 +3,21 @@ from django import forms
 from .models import CommonUser
 
 
-class CommonUserForm(forms.ModelForm):
+class LoginUserForm(forms.ModelForm):
     class Meta:
         model = CommonUser
-        fields = "__all__"
+        fields = ("name", "password")
+
+        widgets = {
+            "password": forms.PasswordInput()
+        } 
+
+
+class RegisterUserForm(forms.ModelForm):
+    class Meta:
+        model = CommonUser
+        fields = ("name", "email", "password", "remarks")
+
+        widgets = {
+            "password": forms.PasswordInput()
+        }
