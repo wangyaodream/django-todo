@@ -30,4 +30,5 @@ urlpatterns = [
     path('tasks/', include('tasks.urls')),
     path('myapp/', include('myapp.urls')),
     path('login/', include('login.urls')),
+    path('chat/', include('chat.urls')),
 ]
